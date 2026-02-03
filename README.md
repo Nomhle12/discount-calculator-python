@@ -20,6 +20,22 @@ print(apply_discount(74.5, 20.0))
 Output
 59.6
 
+Function:
+def apply_discount(price,discount):
+    if not isinstance(price,int) and not isinstance(price,float):
+        return 'The price should be a number'
+    elif price <= 0:
+        return 'The price should be greater than 0'
+    elif not isinstance(discount,int) and not isinstance(discount,float):
+        return 'The discount should be a number'
+    elif discount < 0 or discount > 100:
+        return 'The discount should be between 0 and 100'
+    else:
+        final_price = price - (discount * (price * 0.01))
+        return final_price
+
+print (apply_discount(74.5,20.0))
+
 
 Possible Error Messages
 Condition Returned Message 
